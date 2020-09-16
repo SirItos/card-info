@@ -1,6 +1,20 @@
 // app global css in Sass form
+@font-face 
+    font-family: 'San Francisco Pro Display Regular';
+    src: url('./fonts/SFProDisplay-Regular.eot');
+    src: url('./fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),url('./fonts/SFProDisplay-Regular.woff') format('woff'),url('./fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+body
+    font-family: 'San Francisco Pro Display Regular'!important
+    
 .main-background 
     background-color: #EDEDE9
 
 .q-btn__wrapper:before
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.05)!important
+
+.bg-gradient
+    background: linear-gradient(to bottom, rgba(237,233,233,0) 0,rgba(237,233,233,0.5) 10%,#EDEDE9)

@@ -2,7 +2,10 @@ export interface CardInfo {
   url: string
   title: string
   terms: {
-    info: string
+    info: {
+      title: string
+      text: string
+    }
     add?: string
   }[]
   advantages: {

@@ -7,14 +7,17 @@
       @slideChange="changeSlide"
     >
       <swiper-slide v-for="(image, n) in images" :key="`slide_${n}`" style="">
-        <div>
+        <div style="height:166px">
+          <img :src="`cards/${image}`" :alt="image" style="max-height:100%" />
+        </div>
+        <!-- <div>
           <q-img
             style="height:166px"
             :src="`cards/${image}`"
             spinner-color="primary"
             contain
           />
-        </div>
+        </div> -->
       </swiper-slide>
     </swiper>
   </div>
@@ -55,6 +58,9 @@ export default defineComponent({
     const swiperComponentOption: SwiperOptions = {
       slidesPerView: 'auto',
       centeredSlides: true,
+      loop: true,
+      // loopAdditionalSlides: 5,
+      // loopedSlides: 5,
       spaceBetween: 20
     }
 

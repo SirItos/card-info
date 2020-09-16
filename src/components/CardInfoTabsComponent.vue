@@ -12,18 +12,19 @@
           <q-tabs
             v-model="tab"
             align="left"
-            class="text-primary "
+            indicator-color="primary"
+            active-color="primary"
             :breakpoint="0"
           >
             <q-tab
               name="advantages"
               label="Преимущества"
-              class="text-capitalize q-px-none"
+              class="text-capitalize q-px-none text-weight-bold "
             />
             <q-tab
               name="terms"
               label="Условия"
-              class="text-capitalize q-px-none q-ml-lg"
+              class="text-capitalize q-px-none q-ml-lg text-weight-bold"
             />
           </q-tabs>
         </div>
@@ -79,7 +80,12 @@
               :key="`adv_${index}`"
             >
               <q-item-section>
-                <q-item-label v-html="adv.info" />
+                <q-item-label
+                  class="text-secondary"
+                  style="font-size:12px"
+                  v-html="adv.info.title"
+                />
+                <q-item-label v-html="adv.info.text" />
               </q-item-section>
             </q-item>
             <q-item
